@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morakins - AI UGC Videos That Convert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #D4A855;
+            --secondary-blue: #1E3A5F;
+            --dark-navy: #1A1A2E;
+            --white: #FFFFFF;
+            --light-bg: #F8F7F4;
+            --text-dark: #1A1A2E;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: linear-gradient(90deg, var(--dark-navy) 0%, #0f1b2e 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(212, 168, 85, 0.2);
+            border-bottom: 3px solid var(--primary-gold);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(212, 168, 85, 0.3));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== TORCH ANIMATIONS ===== */
+        .torch {
+            font-size: 1.5rem;
+            animation: flicker 1.5s infinite;
+            display: inline-block;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 5px #D4A855; }
+            50% { opacity: 0.7; text-shadow: 0 0 10px #D4A855; }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, #0f1b2e 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 50%, rgba(212, 168, 85, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 168, 85, 0.15);
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-badge::before {
+            content: '🔥';
+            font-size: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            color: var(--white);
+        }
+
+        .hero h1 .gold {
+            background: linear-gradient(135deg, var(--primary-gold), #f0c674);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #ddd;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(212, 168, 85, 0.3);
+            border: 3px solid var(--primary-gold);
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary-gold);
+            color: var(--dark-navy);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 168, 85, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--primary-gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-gold);
+            color: var(--dark-navy);
+        }
+
+        /* ===== ABOUT US SECTION ===== */
+        .about-us {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(212, 168, 85, 0.25);
+            border: 3px solid var(--primary-gold);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-navy);
+        }
+
+        .about-content h3 {
+            font-size: 1.4rem;
+            color: var(--secondary-blue);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .about-values {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .about-values li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .about-values li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-values strong {
+            color: var(--dark-navy);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-gold);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== UGC TYPES SECTION ===== */
+        .ugc-types {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .type-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 168, 85, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(212, 168, 85, 0.25);
+        }
+
+        .type-card:hover::before {
+            opacity: 1;
+        }
+
+        .type-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .type-card h3 {
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .type-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .steps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+        .step:nth-child(4) { animation-delay: 0.4s; }
+
+        .step-number {
+            min-width: 60px;
+            height: 60px;
+            background: var(--primary-gold);
+            color: var(--dark-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(212, 168, 85, 0.3);
+        }
+
+        .step-content h3 {
+            color: var(--secondary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ===== USP/VALUE SECTION ===== */
+        .usp-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, #2a5c8f 100%);
+            color: var(--white);
+        }
+
+        .usp-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .usp-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-gold);
+        }
+
+        .usp-list {
+            list-style: none;
+        }
+
+        .usp-list li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .usp-list li::before {
+            content: '✓';
+            color: var(--primary-gold);
+            font-weight: bold;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .usp-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .usp-stat {
+            background: rgba(212, 168, 85, 0.1);
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .usp-stat .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-gold);
+        }
+
+        .usp-stat .label {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        /* ===== PROBLEM/SOLUTION ===== */
+        .problem-solution {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .ps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .ps-card {
+            padding: 2.5rem;
+            border-radius: 10px;
+            background: var(--white);
+        }
+
+        .ps-card.problem {
+            border-left: 5px solid #e74c3c;
+        }
+
+        .ps-card.solution {
+            border-left: 5px solid #2ecc71;
+        }
+
+        .ps-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .ps-card.problem h3 { color: #e74c3c; }
+        .ps-card.solution h3 { color: #2ecc71; }
+
+        .ps-list {
+            list-style: none;
+        }
+
+        .ps-list li {
+            padding: 0.7rem 0;
+            color: var(--text-light);
+            line-height: 1.6;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .ps-list li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: inherit;
+        }
+
+        /* ===== PORTFOLIO/GALLERY ===== */
+        .portfolio {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-tag {
+            padding: 8px 20px;
+            border: 2px solid var(--primary-gold);
+            background: transparent;
+            color: var(--primary-gold);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .filter-tag.active,
+        .filter-tag:hover {
+            background: var(--primary-gold);
+            color: var(--dark-navy);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            background: var(--light-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(212, 168, 85, 0.2);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--dark-navy), var(--secondary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .play-button {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-navy);
+            font-size: 1.8rem;
+            transition: all 0.3s;
+            opacity: 0;
+            box-shadow: 0 0 30px rgba(212, 168, 85, 0.5);
+        }
+
+        .portfolio-item:hover .play-button {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        /* ===== VIDEO MODAL ===== */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .video-modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+            background: var(--dark-navy);
+            border-radius: 10px;
+            overflow: hidden;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .video-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-gold);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s;
+        }
+
+        .video-modal-close:hover {
+            transform: scale(1.1);
+            background: #f0c674;
+        }
+
+        .video-modal video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-modal-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--white);
+            padding: 2rem 1rem 1rem;
+            font-weight: 600;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-category {
+            display: inline-block;
+            background: var(--primary-gold);
+            color: var(--dark-navy);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        .portfolio-title {
+            font-weight: 600;
+            color: var(--secondary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .portfolio-client {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--dark-navy) 0%, #0f1b2e 100%);
+            color: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 168, 85, 0.2);
+            backdrop-filter: blur(10px);
+            animation: slideInUp 0.6s ease-out both;
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+        .testimonial-card:nth-child(4) { animation-delay: 0.4s; }
+        .testimonial-card:nth-child(5) { animation-delay: 0.5s; }
+        .testimonial-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--dark-navy);
+            font-size: 1.2rem;
+        }
+
+        .testimonial-meta h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            color: var(--primary-gold);
+        }
+
+        .testimonial-stars {
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text {
+            line-height: 1.6;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        /* ===== PROCESS SECTION ===== */
+        .process {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--primary-gold);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            grid-column: 1 / 2;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2 / 3;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--primary-gold);
+            border: 4px solid var(--light-bg);
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-content h3 {
+            color: var(--secondary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ===== CONTACT/CTA SECTION ===== */
+        .contact {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, #daa966 100%);
+            color: var(--dark-navy);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-navy);
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            background: rgba(0,0,0,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .contact-method {
+            margin-bottom: 1rem;
+        }
+
+        .contact-method a {
+            color: var(--dark-navy);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark-navy);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid var(--primary-gold);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* ===== CHAT WIDGET ===== */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            border: none;
+            color: var(--primary-gold);
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            background: var(--primary-gold);
+            color: var(--dark-navy);
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 998;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .whatsapp-button a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s;
+        }
+
+        .whatsapp-button a:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-image img {
+                max-width: 300px;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .usp-content {
+                grid-template-columns: 1fr;
+            }
+
+            .ps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                margin-left: 60px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                grid-column: 1 / 2;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .types-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-buttons .btn {
+                width: 100%;
+            }
+
+            .video-modal-content {
+                width: 95%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="Morakins_brand_logo-removebg-preview.png" alt="Morakins">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#ugc-types">UGC Types</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">Premium AI UGC Solutions</div>
+            <h1>Realistic AI UGC Videos That Make Products <span class="gold">Impossible to Ignore</span></h1>
+            <p class="hero-subtitle">Transform your e-commerce products into engaging, scroll-stopping content for TikTok, Instagram, Facebook, and YouTube—faster, cheaper, and with zero production hassle.</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary">🚀 Get Started</button>
+                <button class="btn btn-secondary">📽️ View Portfolio</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="file_00000000369c8210b0cfbfea7afa73c8.png" alt="Morakins Elijah - AI UGC Creator">
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT US SECTION -->
+<section class="about-us" id="about">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="1790111916839_image.png" alt="Morakins Team">
+        </div>
+        <div class="about-content">
+            <h2>About <span style="color: var(--primary-gold);">Morakins</span></h2>
+            <p>Morakins Tech Solutions is a cutting-edge digital agency specializing in AI-powered UGC (User-Generated Content) video creation. Founded by <strong>Morakins Elijah</strong>, we're on a mission to revolutionize how e-commerce brands create authentic, engaging product content.</p>
+            
+            <h3>Our Story</h3>
+            <p>Recognizing the massive gap between expensive traditional UGC production and the growing demand for authentic product videos, we built Morakins to empower brands with realistic, creator-style content at a fraction of traditional costs. We combine advanced AI technology with deep understanding of social media trends to create videos that don't just look good—they convert.</p>
+
+            <h3>What We Stand For 🔥</h3>
+            <ul class="about-values">
+                <li><strong>Authenticity:</strong> AI that doesn't feel AI—realistic creator vibes every time</li>
+                <li><strong>Speed:</strong> Get quality videos in days, not weeks or months</li>
+                <li><strong>Affordability:</strong> Premium production without premium prices</li>
+                <li><strong>Results-Driven:</strong> Every video built to convert and engage</li>
+                <li><strong>Creative Freedom:</strong> Unlimited variations and testing for continuous optimization</li>
+            </ul>
+
+            <h3>Our Clients</h3>
+            <p>We work with e-commerce brands across beauty, fitness, tech, beverages, skincare, and more. From startups testing new products to established brands scaling campaigns, Morakins is the trusted partner for realistic, conversion-optimized UGC videos.</p>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">13+</div>
+                    <div class="stat-label">Portfolio Videos Created</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Faster Than Traditional UGC</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5x</div>
+                    <div class="stat-label">More Cost-Effective</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- UGC TYPES SECTION -->
+<section class="ugc-types" id="ugc-types">
+    <div class="section-header">
+        <h2 class="section-title">🎬 Types of UGC Videos We Create</h2>
+        <p class="section-subtitle">Multiple creative angles to showcase your products exactly how your customers want to see them</p>
+    </div>
+
+    <div class="types-grid">
+        <div class="type-card">
+            <div class="type-icon">📦</div>
+            <h3>Unboxing & Reveal</h3>
+            <p>Watch creators discover and unpack your product with genuine excitement and authentic reactions.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🎯</div>
+            <h3>Product Demo</h3>
+            <p>Real, hands-on demonstrations showing your product's features, benefits, and how it actually works.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🗣️</div>
+            <h3>Testimonial Style</h3>
+            <p>Creator testimonials sharing personal experiences, transformations, and why they love your product.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🌟</div>
+            <h3>Lifestyle & Routine</h3>
+            <p>Showcase products integrated into daily life, morning routines, skincare rituals, and lifestyle moments.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">⚡</div>
+            <h3>Before & After</h3>
+            <p>Visual transformations and results that clearly show the impact and value of your product.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🔧</div>
+            <h3>Problem to Solution</h3>
+            <p>Address customer pain points and demonstrate how your product solves real problems beautifully.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">💬</div>
+            <h3>Comparison & Hacks</h3>
+            <p>Compare your product to alternatives or share clever tips and tricks for maximum value.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🎪</div>
+            <h3>Entertainment First</h3>
+            <p>Hook viewers with entertaining hooks first, product reveal second—optimized for scroll-stopping engagement.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">😍</div>
+            <h3>Influencer Style</h3>
+            <p>Creator content that mimics popular influencer formats with trending sounds, captions, and viral hooks.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">💡</div>
+            <h3>Tutorial & How-To</h3>
+            <p>Step-by-step tutorials and hacks showing your audience exactly how to get the most from your product.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🎬</div>
+            <h3>Day in the Life</h3>
+            <p>Follow creators through their day with your product seamlessly integrated into natural moments.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🏆</div>
+            <h3>Results & Wins</h3>
+            <p>Showcase customer success stories, achievements, and real-world wins powered by your product.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🔥</div>
+            <h3>Trending Audio & Hooks</h3>
+            <p>Leverage viral sounds, trending audio clips, and scroll-stopping hooks to maximize engagement.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">👥</div>
+            <h3>Social Proof & Reviews</h3>
+            <p>User-generated style reviews, ratings, and social proof that build trust and credibility.</p>
+        </div>
+
+        <div class="type-card">
+            <div class="type-icon">🎁</div>
+            <h3>Unboxing Haul & Bundles</h3>
+            <p>Multi-product showcase featuring bundles, sets, and haul-style content for maximum product exposure.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<section class="how-it-works" id="how-it-works">
+    <div class="section-header">
+        <h2 class="section-title">⚙️ How Our Process Works</h2>
+        <p class="section-subtitle">From brief to polished video—streamlined, fast, and results-focused</p>
+    </div>
+
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>📋 Brief & Collaboration</h3>
+                <p>We start by understanding your product, target audience, brand voice, and campaign goals. Share product details, unique selling points, and any specific messaging you want included.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>🎨 Concept & Script Development</h3>
+                <p>Our team creates multiple creative concepts and scripts tailored to your audience. We explore different UGC angles—demos, testimonials, lifestyle, problem-solution—and let you pick your favorites.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>🎬 AI Production & Realistic Creation</h3>
+                <p>Using advanced AI tools, we produce realistic, creator-style videos that feel authentic and natural—not obviously AI-generated. Each video is crafted to convert while maintaining genuine UGC vibes.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>✨ Editing, Refinement & Delivery</h3>
+                <p>Final editing, color grading, captions, and optimization for your target platform. We deliver multiple formats ready to publish on TikTok, Reels, YouTube Shorts, or Facebook.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- USP/VALUE SECTION -->
+<section class="usp-section">
+    <div class="usp-content">
+        <div class="usp-text">
+            <h2>🎯 Why Brands Choose Morakins AI UGC</h2>
+            <ul class="usp-list">
+                <li><strong>Realistic & Creator-Led Style —</strong> Content that feels authentic, not robotic or obviously AI</li>
+                <li><strong>Faster Than Traditional UGC —</strong> No scheduling, location scouts, or waiting for creators</li>
+                <li><strong>Cost-Effective Production —</strong> No filming logistics, crews, or expensive equipment needed</li>
+                <li><strong>Unlimited Creative Angles —</strong> Test multiple hooks, scripts, and concepts easily</li>
+                <li><strong>Product-Focused Storytelling —</strong> Videos built around YOUR product's unique benefits</li>
+                <li><strong>Social-First Optimization —</strong> Perfectly formatted for TikTok, Instagram, YouTube Shorts</li>
+                <li><strong>Quick Turnaround —</strong> Get quality videos in days, not weeks</li>
+            </ul>
+        </div>
+
+        <div class="usp-visual">
+            <div class="usp-stat">
+                <div class="number">80%</div>
+                <div class="label">Faster than traditional UGC production</div>
+            </div>
+            <div class="usp-stat">
+                <div class="number">5x</div>
+                <div class="label">More cost-effective than hiring creators</div>
+            </div>
+            <div class="usp-stat">
+                <div class="number">∞</div>
+                <div class="label">Unlimited creative variations & testing</div>
+            </div>
+            <div class="usp-stat">
+                <div class="number">100%</div>
+                <div class="label">Your creative control & ownership</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROBLEM/SOLUTION SECTION -->
+<section class="problem-solution">
+    <div class="section-header">
+        <h2 class="section-title">🔄 The Challenge & Our Solution</h2>
+    </div>
+
+    <div class="ps-grid">
+        <div class="ps-card problem">
+            <h3>❌ The Problem with Traditional UGC</h3>
+            <ul class="ps-list">
+                <li><strong>Expensive:</strong> Paying creators, location fees, production costs add up fast</li>
+                <li><strong>Slow:</strong> Weeks of scheduling, shooting, editing, and revision delays</li>
+                <li><strong>Limited Variation:</strong> Each creator brings one perspective; testing new angles is costly</li>
+                <li><strong>Inconsistent Quality:</strong> Depends on creator's mood, location, equipment, availability</li>
+                <li><strong>Logistical Nightmare:</strong> Coordinating schedules, shipping products, managing contracts</li>
+                <li><strong>Risky:</strong> No guarantee the video will actually convert or fit your brand</li>
+            </ul>
+        </div>
+
+        <div class="ps-card solution">
+            <h3>✅ Our AI-Powered Solution</h3>
+            <ul class="ps-list">
+                <li><strong>Affordable:</strong> Fraction of the cost of hiring human creators</li>
+                <li><strong>Fast:</strong> Get multiple videos in days, not weeks</li>
+                <li><strong>Unlimited Testing:</strong> Create dozens of variations to find what converts best</li>
+                <li><strong>Consistent Quality:</strong> Every video meets your standards; no bad takes</li>
+                <li><strong>Zero Logistics:</strong> No scheduling, shipping, or coordination headaches</li>
+                <li><strong>Guaranteed Results:</strong> Product-focused, conversion-optimized, platform-ready</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio" id="portfolio">
+    <div class="section-header">
+        <h2 class="section-title">🎥 Our Portfolio</h2>
+        <p class="section-subtitle">Real UGC videos across beauty, fitness, tech, beverages, and more</p>
+    </div>
+
+    <div class="filter-tags">
+        <button class="filter-tag active" data-filter="all">All Videos</button>
+        <button class="filter-tag" data-filter="product-demo">Product Demo</button>
+        <button class="filter-tag" data-filter="testimonial">Testimonial</button>
+        <button class="filter-tag" data-filter="lifestyle">Lifestyle</button>
+        <button class="filter-tag" data-filter="before-after">Before & After</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <!-- Video 1 -->
+        <div class="portfolio-item" data-category="product-demo" onclick="playVideo('Skincare GlowDrop Serum.mp4', 'Skincare Serum Ritual')">
+            <div class="portfolio-image">
+                <img src="Skincare GlowDrop Serum_thumb.jpg" alt="Skincare Demo">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Product Demo</span>
+                <h3 class="portfolio-title">Skincare Serum Ritual</h3>
+                <p class="portfolio-desc">Creator demonstrating a luxurious serum application as part of daily skincare routine with transformation focus.</p>
+                <p class="portfolio-client">GlowDrop Skincare Co.</p>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="portfolio-item" data-category="before-after" onclick="playVideo('BeautyCosmetics Velora Satin Glow Lipstick.mp4', 'Luxury Lipstick Application')">
+            <div class="portfolio-image">
+                <img src="BeautyCosmetics Velora Satin Glow Lipstick_thumb.jpg" alt="Lipstick Demo">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Before & After</span>
+                <h3 class="portfolio-title">Luxury Lipstick Application</h3>
+                <p class="portfolio-desc">Elegant before-and-after lipstick application showcasing color, texture, and long-wearing formula benefits.</p>
+                <p class="portfolio-client">Velora Beauty</p>
+            </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="portfolio-item" data-category="lifestyle" onclick="playVideo('Beverage Brewline Cold Brew.mp4', 'Morning Cold Brew Ritual')">
+            <div class="portfolio-image">
+                <img src="Beverage Brewline Cold Brew_thumb.jpg" alt="Cold Brew Demo">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Lifestyle</span>
+                <h3 class="portfolio-title">Morning Cold Brew Ritual</h3>
+                <p class="portfolio-desc">Lifestyle content capturing the morning coffee ritual with product unboxing and enjoyment moments.</p>
+                <p class="portfolio-client">Brewline Coffee</p>
+            </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="portfolio-item" data-category="product-demo" onclick="playVideo('Fitness Supplement  PureFuel Protein Shaker.mp4', 'Post-Workout Protein Shake')">
+            <div class="portfolio-image">
+                <img src="Fitness Supplement  PureFuel Protein Shaker_thumb.jpg" alt="Protein Shake">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Product Demo</span>
+                <h3 class="portfolio-title">Post-Workout Protein Shake</h3>
+                <p class="portfolio-desc">Fitness enthusiast demonstrating quick protein shake preparation and consumption with benefits highlighted.</p>
+                <p class="portfolio-client">PureFuel Fitness</p>
+            </div>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="portfolio-item" data-category="testimonial" onclick="playVideo('Creator_applying_Vitamin_C_serum_20260920115004.mp4', 'Vitamin C Serum Transformation')">
+            <div class="portfolio-image">
+                <img src="Creator_applying_Vitamin_C_serum_20260920115004_thumb.jpg" alt="Vitamin C Serum">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Testimonial</span>
+                <h3 class="portfolio-title">Vitamin C Serum Transformation</h3>
+                <p class="portfolio-desc">Real transformation story: creator shares skincare journey and how vitamin C serum changed their routine.</p>
+                <p class="portfolio-client">BrightGlow Skincare</p>
+            </div>
+        </div>
+
+        <!-- Video 6 -->
+        <div class="portfolio-item" data-category="lifestyle" onclick="playVideo('PureGlow_Radiance_body_wash_tran#U2026_20260920115433.mp4', 'Daily Body Care Ritual')">
+            <div class="portfolio-image">
+                <img src="PureGlow_Radiance_body_wash_tran#U2026_20260920115433_thumb.jpg" alt="Body Wash">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Lifestyle</span>
+                <h3 class="portfolio-title">Daily Body Care Ritual</h3>
+                <p class="portfolio-desc">Luxurious body wash demonstration in shower routine, highlighting scent, lather, and skin benefits.</p>
+                <p class="portfolio-client">PureGlow Cosmetics</p>
+            </div>
+        </div>
+
+        <!-- Video 7 -->
+        <div class="portfolio-item" data-category="lifestyle" onclick="playVideo('Creator_showcasing_daily_facial_#U2026_20260920115915.mp4', 'Complete Facial Care Routine')">
+            <div class="portfolio-image">
+                <img src="Creator_showcasing_daily_facial_#U2026_20260920115915_thumb.jpg" alt="Facial Routine">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Lifestyle</span>
+                <h3 class="portfolio-title">Complete Facial Care Routine</h3>
+                <p class="portfolio-desc">Creator's full morning skincare routine showcasing multiple products and the ease of the regimen.</p>
+                <p class="portfolio-client">FacePure Skincare</p>
+            </div>
+        </div>
+
+        <!-- Video 8 -->
+        <div class="portfolio-item" data-category="product-demo" onclick="playVideo('AI Products Video.mp4', 'Tech Product Feature Showcase')">
+            <div class="portfolio-image">
+                <img src="AI Products Video_thumb.jpg" alt="Tech Product">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Product Demo</span>
+                <h3 class="portfolio-title">Tech Product Feature Showcase</h3>
+                <p class="portfolio-desc">Modern tech product demonstration highlighting key features, design, and innovative capabilities.</p>
+                <p class="portfolio-client">TechFlow AI Solutions</p>
+            </div>
+        </div>
+
+        <!-- Video 9 -->
+        <div class="portfolio-item" data-category="lifestyle" onclick="playVideo('Woman_drinking_cold_brew_coffee.mp4', 'Premium Coffee Experience')">
+            <div class="portfolio-image">
+                <img src="Woman_drinking_cold_brew_coffee_thumb.jpg" alt="Coffee Enjoyment">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Lifestyle</span>
+                <h3 class="portfolio-title">Premium Coffee Experience</h3>
+                <p class="portfolio-desc">Casual lifestyle moment: enjoying cold brew coffee with focus on taste, convenience, and lifestyle appeal.</p>
+                <p class="portfolio-client">Brewline Coffee</p>
+            </div>
+        </div>
+
+        <!-- Video 10 -->
+        <div class="portfolio-item" data-category="product-demo" onclick="playVideo('From Main Klickpin CF- Soda Can 3d Product Animation - 2KhLKQjL1.mp4', '3D Product Animation')">
+            <div class="portfolio-image">
+                <img src="From Main Klickpin CF- Soda Can 3d Product Animation - 2KhLKQjL1_thumb.jpg" alt="3D Animation">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Product Demo</span>
+                <h3 class="portfolio-title">3D Product Animation</h3>
+                <p class="portfolio-desc">Dynamic 3D animated product showcase perfect for introducing new beverages and product launches.</p>
+                <p class="portfolio-client">FreshBeverage Brand</p>
+            </div>
+        </div>
+
+        <!-- Video 11 - NEW -->
+        <div class="portfolio-item" data-category="testimonial" onclick="playVideo('Creator_demonstrates_three_cloth#U2026_20260920121331.mp4', 'Product Benefits Showcase')">
+            <div class="portfolio-image">
+                <img src="Creator_demonstrates_three_cloth#U2026_20260920121331_thumb.jpg" alt="Product Benefits">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Testimonial</span>
+                <h3 class="portfolio-title">Product Benefits Showcase</h3>
+                <p class="portfolio-desc">Creator shares authentic experience and multi-benefit product features with detailed walkthrough and personal insights.</p>
+                <p class="portfolio-client">Premium Brand Co.</p>
+            </div>
+        </div>
+
+        <!-- Video 12 - NEW -->
+        <div class="portfolio-item" data-category="before-after" onclick="playVideo('video_4669d95b-00c9-43b2-9f20-91c151f9d3ba.mp4', 'Transformation Results')">
+            <div class="portfolio-image">
+                <img src="video_4669d95b-00c9-43b2-9f20-91c151f9d3ba_thumb.jpg" alt="Transformation">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="portfolio-info">
+                <span class="portfolio-category">Before & After</span>
+                <h3 class="portfolio-title">Transformation Results</h3>
+                <p class="portfolio-desc">Striking before and after transformation showcasing the real-world impact and effectiveness of the product.</p>
+                <p class="portfolio-client">Results-Driven Brand</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS TIMELINE SECTION -->
+<section class="process">
+    <div class="section-header">
+        <h2 class="section-title">📅 Our Production Process</h2>
+        <p class="section-subtitle">A streamlined workflow designed for speed and quality</p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Day 1: Discovery Call & Brief</h3>
+                <p>Understand your product, target audience, brand messaging, and specific video goals. Collect all necessary product details, images, and brand guidelines.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Day 2: Concept & Script Creation</h3>
+                <p>Develop 3-5 creative concepts and scripts tailored to your audience. Present options and gather your feedback on preferred direction and style.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Day 3-4: AI Production</h3>
+                <p>Produce realistic, high-quality UGC videos using advanced AI tools. Each video is crafted to feel authentic and creator-led, not AI-generated.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Day 5: Editing & Refinement</h3>
+                <p>Final editing, color correction, captions, platform optimization. Videos ready for immediate posting on TikTok, Instagram, YouTube, Facebook.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Day 6: Delivery & Support</h3>
+                <p>Deliver all videos in requested formats. Provide analytics recommendations and support for any adjustments or future campaigns.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials" id="testimonials">
+    <div class="section-header">
+        <h2 class="section-title">🌟 What Brands Are Saying</h2>
+        <p class="section-subtitle">Real results from real e-commerce brands using Morakins AI UGC</p>
+    </div>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">AJ</div>
+                <div class="testimonial-meta">
+                    <h4>Amara Jackson</h4>
+                    <p class="testimonial-role">E-Commerce Manager, Glow Cosmetics</p>
+                </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Morakins delivered 5 stunning UGC videos in just one week. The quality is incredible—they look like real creator content. Our TikTok engagement doubled within two weeks of posting!"</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">MC</div>
+                <div class="testimonial-meta">
+                    <h4>Marcus Chen</h4>
+                    <p class="testimonial-role">Digital Marketing Lead, FitFuel Nutrition</p>
+                </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"We tried traditional UGC creators and paid 10x more for half the results. With Morakins, we got realistic product demos that actually convert. Highly recommended!"</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">SR</div>
+                <div class="testimonial-meta">
+                    <h4>Sarah Rodriguez</h4>
+                    <p class="testimonial-role">Brand Owner, LuxeBeauty Store</p>
+                </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"The turnaround time is insane. I needed videos for a product launch and Morakins delivered within 4 days. The results speak for themselves—best investment we made this quarter."</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">KT</div>
+                <div class="testimonial-meta">
+                    <h4>Kevin Thompson</h4>
+                    <p class="testimonial-role">Founder, TechFlow Innovations</p>
+                </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"We tested 15 different video concepts in one month. The cost was a fraction of hiring that many creators, and the quality was consistently excellent. Game-changer for our brand."</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">NN</div>
+                <div class="testimonial-meta">
+                    <h4>Nina Nwosu</h4>
+                    <p class="testimonial-role">Social Media Manager, Prime Skincare</p>
+                </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"The videos don't feel AI-generated at all. They look like authentic creator content. We've been using Morakins for 3 campaigns now and seeing 200%+ ROI improvement."</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <div class="testimonial-avatar">JW</div>
+                <div class="testimonial-meta">
+                    <h4>Jessica Wei</h4>
+                    <p class="testimonial-role">Head of Marketing, BrewMaster Coffee</p>
+                </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"No production headaches, no scheduling conflicts with creators, no wasted time. Just quality videos that work. Morakins has completely changed how we approach content creation."</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+    <div class="contact-content">
+        <h2>Ready to Transform Your Product Videos? 🚀</h2>
+        <p>Stop settling for slow, expensive, inconsistent UGC. Get realistic, conversion-optimized videos in days—not weeks.</p>
+        
+        <div class="contact-buttons">
+            <button class="btn btn-secondary">📧 Get a Free Quote</button>
+            <button class="btn btn-primary">💬 Chat with Us</button>
+        </div>
+
+        <div class="contact-info">
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">Get in Touch</h3>
+            
+            <div class="contact-method">
+                📧 Email: <a href="mailto:Morakinstechsolutions@gmail.com">Morakinstechsolutions@gmail.com</a>
+            </div>
+            
+            <div class="contact-method">
+                📞 Phone: <a href="tel:09135578049">+234 913 557 8049</a> (WhatsApp Business)
+            </div>
+            
+            <div class="contact-method">
+                📞 Hotline: <a href="tel:09027036061">+234 902 703 6061</a>
+            </div>
+
+            <div class="contact-method" style="margin-top: 1.5rem;">
+                💼 LinkedIn: <a href="https://www.linkedin.com/in/morakins-elijah-78a88740a" target="_blank">Morakins Elijah</a>
+            </div>
+
+            <div class="contact-method">
+                📱 Instagram: <a href="https://www.instagram.com/abheymiracle/" target="_blank">@abheymiracle</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.instagram.com/abheymiracle/" target="_blank" title="Instagram">📱</a>
+            <a href="https://www.linkedin.com/in/morakins-elijah-78a88740a" target="_blank" title="LinkedIn">💼</a>
+            <a href="mailto:Morakinstechsolutions@gmail.com" title="Email">📧</a>
+            <a href="https://wa.me/09135578049" target="_blank" title="WhatsApp">💬</a>
+        </div>
+        <p>&copy; 2024 Morakins Tech Solutions. AI-Powered UGC Videos That Convert.</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">Crafting realistic, scroll-stopping content for e-commerce brands.</p>
+    </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<div class="whatsapp-button">
+    <a href="https://wa.me/09135578049?text=Hi%20Morakins!%20I%20want%20to%20discuss%20AI%20UGC%20videos%20for%20my%20brand." target="_blank">
+        💬 WhatsApp Us
+    </a>
+</div>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+        <button class="video-modal-close" onclick="closeVideo()">✕</button>
+        <video id="videoPlayer" controls style="width: 100%; height: auto;">
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-modal-title" id="videoTitle"></div>
+    </div>
+</div>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget">
+    <button class="chat-button" onclick="alert('💬 Chat feature: Contact us via WhatsApp, Email, or call for instant support!')">
+        💬
+    </button>
+</div>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Filter functionality
+    const filterTags = document.querySelectorAll('.filter-tag');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterTags.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter portfolio items
+            portfolioItems.forEach(item => {
+                if (filterValue === 'all') {
+                    item.style.display = 'flex';
+                    item.style.animation = 'fadeInUp 0.5s ease-out';
+                } else {
+                    const itemCategory = item.getAttribute('data-category');
+                    if (itemCategory === filterValue) {
+                        item.style.display = 'flex';
+                        item.style.animation = 'fadeInUp 0.5s ease-out';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+
+    // Play button click handlers and video player
+    function playVideo(videoFile, title) {
+        const modal = document.getElementById('videoModal');
+        const videoSource = document.getElementById('videoSource');
+        const videoTitle = document.getElementById('videoTitle');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        videoSource.src = videoFile;
+        videoTitle.textContent = title;
+        videoPlayer.load();
+        modal.classList.add('active');
+        videoPlayer.play();
+    }
+
+    function closeVideo() {
+        const modal = document.getElementById('videoModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+        modal.classList.remove('active');
+        videoPlayer.pause();
+    }
+
+    // Close video modal when clicking outside
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeVideo();
+        }
+    });
+
+    // Close video on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeVideo();
+        }
+    });
+
+    // CTA Button functionality
+    document.querySelector('.btn-primary').addEventListener('click', function() {
+        alert('🚀 Ready to get started?\n\nWhatsApp: +234 913 557 8049\nEmail: Morakinstechsolutions@gmail.com');
+    });
+</script>
+
+</body>
+</html>

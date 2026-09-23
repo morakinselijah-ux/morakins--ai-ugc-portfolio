@@ -1,0 +1,54 @@
+🚀 MORAKINS AI UGC PORTFOLIO - QUICK START (3 STEPS)
+═══════════════════════════════════════════════════════════════════════════════
+
+STEP 1: DOWNLOAD ALL FILES ✅
+────────────────────────────
+Download the files included in this package to your computer.
+
+
+STEP 2: UPLOAD TO GITHUB (10 minutes) 📤
+─────────────────────────────────────────
+1. Go to: https://github.com/morakinselijah-ux/morakins--ai-ugc-portfolio
+2. Click "Add file" → "Upload files"
+3. Drag & drop ALL files OR select them
+4. Click "Commit changes"
+5. Wait for upload ✅
+
+
+STEP 3: ENABLE GITHUB PAGES (5 minutes) 🌐
+──────────────────────────────────────────
+1. Go to Settings → Pages
+2. Source: "Deploy from a branch"
+3. Branch: "main" | Folder: "/ (root)"
+4. Click "Save"
+5. Wait 2-3 minutes ✅
+
+
+🎉 YOUR LIVE WEBSITE:
+https://morakinselijah-ux.github.io/morakins--ai-ugc-portfolio
+
+
+📋 FILES TO UPLOAD:
+─────────────────
+✅ index.html (MAIN FILE)
+✅ README.md
+✅ logo.png
+✅ 1790111916839_image.png
+✅ file_00000000369c8210b0cfbfea7afa73c8.png
+✅ All 12 videos (.mp4)
+✅ All 12 thumbnails (.jpg)
+
+Total: 25+ files
+
+
+⚡ IMPORTANT NOTES:
+──────────────────
+• All files must be in SAME folder on your computer
+• Upload ALL files together to GitHub
+• Don't rename files (keep original names)
+• After upload, wait 2-3 minutes for GitHub to process
+• Videos work because they're in same folder as index.html
+
+For detailed guide, read: GITHUB_SETUP_GUIDE.txt
+
+Need help? WhatsApp: +234 913 557 8049

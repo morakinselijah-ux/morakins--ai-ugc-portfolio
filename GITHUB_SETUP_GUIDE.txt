@@ -1,0 +1,261 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    MORAKINS - GITHUB SETUP GUIDE
+                  Complete Step-by-Step Instructions
+═══════════════════════════════════════════════════════════════════════════════
+
+📁 FILES INCLUDED IN THIS PACKAGE:
+─────────────────────────────────────────────────────────────────────────────
+✅ index.html                    - Main website file (RENAME from portfolio.html)
+✅ README.md                      - GitHub repository description
+✅ logo.png                       - Morakins brand logo
+✅ Profile images                 - Your team/profile photos
+✅ All video files (.mp4)         - 12 portfolio videos
+✅ All thumbnail files (.jpg)     - Video thumbnails
+
+TOTAL: 25+ files ready to upload
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PART 1: PREPARE YOUR FILES (5 MINUTES)
+═══════════════════════════════════════════════════════════════════════════════
+
+STEP 1: Create a Folder on Your Computer
+─────────────────────────────────────────
+1. Create a new folder: "morakins-portfolio"
+2. Place ALL these files into that folder:
+   
+   📁 morakins-portfolio/
+   ├── index.html                    ⭐ MAIN FILE
+   ├── README.md
+   ├── logo.png
+   ├── 1790111916839_image.png
+   ├── file_00000000369c8210b0cfbfea7afa73c8.png
+   ├── AI Products Video.mp4
+   ├── AI Products Video_thumb.jpg
+   ├── BeautyCosmetics Velora Satin Glow Lipstick.mp4
+   ├── BeautyCosmetics Velora Satin Glow Lipstick_thumb.jpg
+   ├── Beverage Brewline Cold Brew.mp4
+   ├── Beverage Brewline Cold Brew_thumb.jpg
+   ├── Creator_applying_Vitamin_C_serum_20260920115004.mp4
+   ├── Creator_applying_Vitamin_C_serum_20260920115004_thumb.jpg
+   ├── Creator_demonstrates_three_cloth#U2026_20260920121331.mp4
+   ├── Creator_demonstrates_three_cloth#U2026_20260920121331_thumb.jpg
+   ├── Creator_showcasing_daily_facial_#U2026_20260920115915.mp4
+   ├── Creator_showcasing_daily_facial_#U2026_20260920115915_thumb.jpg
+   ├── Fitness Supplement  PureFuel Protein Shaker.mp4
+   ├── Fitness Supplement  PureFuel Protein Shaker_thumb.jpg
+   ├── From Main Klickpin CF- Soda Can 3d Product Animation - 2KhLKQjL1.mp4
+   ├── From Main Klickpin CF- Soda Can 3d Product Animation - 2KhLKQjL1_thumb.jpg
+   ├── PureGlow_Radiance_body_wash_tran#U2026_20260920115433.mp4
+   ├── PureGlow_Radiance_body_wash_tran#U2026_20260920115433_thumb.jpg
+   ├── Woman_drinking_cold_brew_coffee.mp4
+   ├── Woman_drinking_cold_brew_coffee_thumb.jpg
+   ├── video_4669d95b-00c9-43b2-9f20-91c151f9d3ba.mp4
+   └── video_4669d95b-00c9-43b2-9f20-91c151f9d3ba_thumb.jpg
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PART 2: UPLOAD TO GITHUB REPOSITORY (10 MINUTES)
+═══════════════════════════════════════════════════════════════════════════════
+
+Go to your GitHub repository: https://github.com/morakinselijah-ux/morakins--ai-ugc-portfolio
+
+STEP 1: Click "Add file"
+─────────────────────────
+1. Go to your repository main page
+2. Look for green button "Code" or "Add file" button
+3. Click "Add file" → Select "Upload files"
+
+STEP 2: Upload All Files
+────────────────────────
+1. Click "choose your files" OR drag & drop
+2. Select ALL files from your "morakins-portfolio" folder
+3. It will show all files being uploaded:
+   ✅ index.html
+   ✅ README.md
+   ✅ logo.png
+   ✅ All images
+   ✅ All videos (12)
+   ✅ All thumbnails (12)
+
+STEP 3: Commit Changes
+──────────────────────
+1. Scroll to bottom of the page
+2. Click green button "Commit changes"
+3. Wait for upload to complete (may take 1-2 minutes for videos)
+
+🎉 All files are now on GitHub!
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PART 3: ENABLE GITHUB PAGES (MAKE IT LIVE!) (5 MINUTES)
+═══════════════════════════════════════════════════════════════════════════════
+
+STEP 1: Go to Repository Settings
+──────────────────────────────────
+1. Click "Settings" tab (top right of repo)
+2. Left sidebar → Click "Pages"
+
+STEP 2: Configure GitHub Pages
+────────────────────────────────
+Under "Build and deployment" section:
+
+1. **Source:** Select "Deploy from a branch"
+2. **Branch:** Select "main" 
+3. **Folder:** Select "/ (root)"
+4. Click "Save" button (blue)
+
+STEP 3: Wait for Deployment
+─────────────────────────────
+⏳ Wait 2-3 minutes for GitHub to build and deploy
+
+You'll see a green checkmark when it's done ✅
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PART 4: GET YOUR LIVE WEBSITE LINK! 🎉
+═══════════════════════════════════════════════════════════════════════════════
+
+After waiting 2-3 minutes:
+
+STEP 1: Check Your Live Link
+─────────────────────────────
+1. Go back to Settings → Pages
+2. You'll see a message:
+   
+   ✅ "Your site is published at: 
+       https://morakinselijah-ux.github.io/morakins--ai-ugc-portfolio"
+
+STEP 2: Test Your Website
+──────────────────────────
+1. Click the link
+2. Your website should appear with:
+   ✅ Logo showing
+   ✅ Profile image showing
+   ✅ All 12 videos working
+   ✅ All images displaying
+   ✅ Filter buttons working
+   ✅ Everything fully functional!
+
+3. Test:
+   - Click a video → Should play in modal ✅
+   - Click filter buttons → Should filter videos ✅
+   - Scroll through → Should be mobile responsive ✅
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PART 5: SHARE YOUR WEBSITE (BONUS) 🚀
+═══════════════════════════════════════════════════════════════════════════════
+
+Your Live Website Link:
+────────────────────────
+https://morakinselijah-ux.github.io/morakins--ai-ugc-portfolio
+
+Share with:
+──────────
+✅ Clients
+✅ Portfolio/Resume
+✅ LinkedIn
+✅ Email
+✅ Social Media (@abheymiracle)
+✅ WhatsApp (+234 913 557 8049)
+
+Example Message:
+────────────────
+"Check out my AI UGC portfolio: 
+https://morakinselijah-ux.github.io/morakins--ai-ugc-portfolio
+
+I create realistic, conversion-optimized UGC videos for e-commerce brands.
+
+Let's discuss your project!"
+
+
+═══════════════════════════════════════════════════════════════════════════════
+PART 6: TROUBLESHOOTING (IF SOMETHING DOESN'T WORK)
+═══════════════════════════════════════════════════════════════════════════════
+
+❌ Logo not showing?
+────────────────────
+→ Make sure "logo.png" is uploaded to root folder
+→ Check filename spelling exactly: logo.png
+→ Refresh page (Ctrl+F5 or Cmd+Shift+R)
+
+❌ Videos not playing?
+──────────────────────
+→ Make sure all .mp4 files are uploaded
+→ Check video filenames are EXACTLY as listed:
+   - AI Products Video.mp4
+   - BeautyCosmetics Velora Satin Glow Lipstick.mp4
+   - etc.
+→ Wait 5 minutes after upload (GitHub may still be processing)
+→ Refresh page in browser
+
+❌ Thumbnails not showing?
+──────────────────────────
+→ Make sure all *_thumb.jpg files are uploaded
+→ Must be in same folder as index.html
+→ Filenames must match EXACTLY
+
+❌ Website not showing at all?
+──────────────────────────────
+→ Go back to Settings → Pages
+→ Make sure Source is set to "Deploy from a branch"
+→ Make sure Branch is "main" and folder is "/ (root)"
+→ Wait 3 minutes and refresh
+→ If still not working, click "Re-run job" under deployment
+
+❌ Filter buttons not working?
+──────────────────────────────
+→ This is a JavaScript feature - refresh page
+→ Try different browser (Chrome, Firefox, Safari)
+→ Clear browser cache (Ctrl+Shift+Delete)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+QUICK CHECKLIST
+═══════════════════════════════════════════════════════════════════════════════
+
+Before uploading to GitHub:
+ □ All files in one folder named "morakins-portfolio"
+ □ index.html is the main file
+ □ README.md included
+ □ logo.png included
+ □ Both profile images included
+ □ All 12 video .mp4 files included
+ □ All 12 thumbnail .jpg files included
+
+During GitHub upload:
+ □ Clicked "Add file" → "Upload files"
+ □ Selected all files from folder
+ □ Clicked "Commit changes"
+ □ Upload completed successfully
+
+After upload:
+ □ Went to Settings → Pages
+ □ Selected "Deploy from a branch"
+ □ Selected "main" branch and "/ (root)" folder
+ □ Clicked "Save"
+ □ Waited 2-3 minutes
+
+Testing:
+ □ Website is live at GitHub URL
+ □ Logo is showing
+ □ Images are displaying
+ □ Videos are playing when clicked
+ □ Filter buttons work
+ □ Everything looks good on mobile
+
+
+═══════════════════════════════════════════════════════════════════════════════
+YOUR FINAL LIVE WEBSITE URL
+═══════════════════════════════════════════════════════════════════════════════
+
+https://morakinselijah-ux.github.io/morakins--ai-ugc-portfolio
+
+📧 Need help? Email: Morakinstechsolutions@gmail.com
+💬 WhatsApp: +234 913 557 8049
+📱 Instagram: @abheymiracle
+
+═══════════════════════════════════════════════════════════════════════════════
+                        GOOD LUCK! 🚀
+═══════════════════════════════════════════════════════════════════════════════
