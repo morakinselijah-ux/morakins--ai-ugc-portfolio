@@ -1,0 +1,88 @@
+🔧 QUICK FIX FOR MORAKINS PORTFOLIO - 5 MINUTES
+═════════════════════════════════════════════════════════════════════════
+
+PROBLEM FOUND:
+✗ Team photo (1790111916839_image.png) was NOT uploaded to GitHub
+✗ Video files with #U2026 characters had encoding issues
+✗ HTML was looking for old filenames
+
+SOLUTION: Upload corrected files!
+
+═════════════════════════════════════════════════════════════════════════
+
+STEP 1: DELETE OLD FILES FROM GITHUB (2 minutes)
+─────────────────────────────────────────────────
+
+Go to: https://github.com/morakinselijah-ux/morakins--ai-ugc-portfolio
+
+Delete these files by clicking each one and clicking "Delete file":
+
+🗑️ Creator_demonstrates_three_cloth#U2026_20260920121331.mp4
+🗑️ Creator_demonstrates_three_cloth#U2026_20260920121331_thumb.jpg
+🗑️ Creator_showcasing_daily_facial_#U2026_20260920115915.mp4
+🗑️ Creator_showcasing_daily_facial_#U2026_20260920115915_thumb.jpg
+🗑️ PureGlow_Radiance_body_wash_tran#U2026_20260920115433.mp4
+🗑️ PureGlow_Radiance_body_wash_tran#U2026_20260920115433_thumb.jpg
+
+(Also safe to delete the old index.html - we'll upload new one)
+
+
+STEP 2: UPLOAD CORRECTED FILES (2 minutes)
+──────────────────────────────────────────
+
+1. Go to: https://github.com/morakinselijah-ux/morakins--ai-ugc-portfolio
+
+2. Click "Add file" → "Upload files"
+
+3. Download "morakins-github-corrected.zip" (attached)
+
+4. Extract it
+
+5. Upload ALL files from the corrected zip:
+   ✅ Updated index.html
+   ✅ Creator_Product_Benefits.mp4
+   ✅ Creator_Product_Benefits_thumb.jpg
+   ✅ Creator_Facial_Routine.mp4
+   ✅ Creator_Facial_Routine_thumb.jpg
+   ✅ PureGlow_Body_Wash.mp4
+   ✅ PureGlow_Body_Wash_thumb.jpg
+   ✅ Morakins_Team_Photo.png (NEW - this fixes team photo)
+   ✅ All other files (images, videos, etc.)
+
+6. Click "Commit changes"
+
+7. Wait 2-3 minutes for GitHub to process
+
+
+STEP 3: CHECK IT WORKS (1 minute)
+─────────────────────────────────
+
+Go to: https://morakinselijah-ux.github.io/morakins--ai-ugc-portfolio/
+
+Refresh page (Ctrl+F5)
+
+Check:
+✅ Logo appears
+✅ Team photo appears
+✅ All videos play
+✅ All thumbnails show
+✅ Filter buttons work
+
+
+WHAT CHANGED:
+─────────────
+
+Old Files → New Clean Names:
+Creator_demonstrates_three_cloth#U2026_20260920121331 → Creator_Product_Benefits
+Creator_showcasing_daily_facial_#U2026_20260920115915 → Creator_Facial_Routine
+PureGlow_Radiance_body_wash_tran#U2026_20260920115433 → PureGlow_Body_Wash
+1790111916839_image.png → Morakins_Team_Photo.png
+
+HTML: Updated to reference these clean filenames
+
+
+DONE! Your website will be fixed! 🎉
+
+═════════════════════════════════════════════════════════════════════════
+
+Need help? WhatsApp: +234 913 557 8049
