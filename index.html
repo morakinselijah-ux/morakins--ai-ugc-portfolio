@@ -1231,7 +1231,7 @@
         footer {
             background: linear-gradient(135deg, var(--secondary-blue) 0%, #1e4d7b 100%);
             color: var(--white);
-            padding: 3rem 2rem;
+            padding: 1.5rem 1.5rem;
             border-top: 3px solid var(--primary-gold);
         }
 
@@ -1242,36 +1242,36 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .footer-column {
-            padding: 1.5rem;
+            padding: 0.8rem;
             background: rgba(212, 168, 85, 0.05);
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-gold);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-gold);
         }
 
         .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
             color: var(--primary-gold);
             font-weight: 900;
         }
 
         .footer-column h4 {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--primary-gold);
             font-weight: 700;
         }
 
         .footer-column p {
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.4;
             opacity: 0.9;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.4rem;
         }
 
         .footer-links {
@@ -1280,14 +1280,14 @@
         }
 
         .footer-links li {
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.3rem;
         }
 
         .footer-links a {
             color: #d0d0d0;
             text-decoration: none;
             transition: color 0.3s;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .footer-links a:hover {
@@ -1297,15 +1297,15 @@
 
         .footer-highlight {
             background: rgba(212, 168, 85, 0.15);
-            padding: 1rem;
+            padding: 0.8rem;
             border-radius: 8px;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             border: 1px solid var(--primary-gold);
         }
 
         .footer-highlight p {
             margin: 0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .discount-badge {
@@ -1444,13 +1444,13 @@
         .footer-bottom {
             text-align: center;
             border-top: 1px solid rgba(212, 168, 85, 0.3);
-            padding-top: 2rem;
+            padding-top: 1rem;
             opacity: 0.9;
         }
 
         .footer-bottom p {
-            font-size: 0.9rem;
-            margin: 0.5rem 0;
+            font-size: 0.85rem;
+            margin: 0.3rem 0;
         }
 
         /* ===== CHAT WIDGET ===== */
@@ -1625,7 +1625,7 @@
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#footer-contact">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -2392,6 +2392,7 @@
                     </a>
                 </div>
             </div>
+
         </div>
 
         <!-- Footer Bottom -->
@@ -2569,42 +2570,38 @@
         
         stats.forEach(stat => {
             const target = parseInt(stat.getAttribute('data-target'));
-            let current = 0;
-            const increment = target / 60; // Animate over ~1 second (60 frames)
             
-            const counter = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    if (target === 80) {
-                        stat.textContent = target + '%';
-                    } else if (target === 5) {
-                        stat.textContent = target + 'x';
+            // Continuous looping animation
+            const loopAnimation = () => {
+                let current = 0;
+                const increment = target / 60; // Animate over ~1 second (60 frames)
+                
+                const counter = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        if (target === 80) {
+                            stat.textContent = target + '%';
+                        } else if (target === 5) {
+                            stat.textContent = target + 'x';
+                        } else {
+                            stat.textContent = target + '+';
+                        }
+                        clearInterval(counter);
+                        // Restart animation after 2 seconds (loop effect)
+                        setTimeout(loopAnimation, 2000);
                     } else {
-                        stat.textContent = target + '+';
+                        stat.textContent = Math.floor(current) + (target === 80 ? '%' : target === 5 ? 'x' : '+');
                     }
-                    clearInterval(counter);
-                } else {
-                    stat.textContent = Math.floor(current) + (target === 80 ? '%' : target === 5 ? 'x' : '+');
-                }
-            }, 16);
+                }, 16);
+            };
+            
+            // Start the looping animation
+            loopAnimation();
         });
     }
 
-    // Trigger stats animation when section comes into view
-    const aboutSection = document.querySelector('.about-stats');
-    if (aboutSection) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                    animateStats();
-                    entry.target.classList.add('animated');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        observer.observe(aboutSection);
-    }
+    // Start stats animation immediately on page load
+    animateStats();
 </script>
 
 </body>
