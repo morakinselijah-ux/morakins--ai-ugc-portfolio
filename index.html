@@ -541,6 +541,18 @@
             margin: 0 auto;
         }
 
+        /* Special styling for testimonials section */
+        .testimonials .section-header .section-title {
+            color: var(--primary-gold);
+            font-weight: 900;
+        }
+
+        .testimonials .section-header .section-subtitle {
+            color: var(--primary-gold);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
         .types-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1626,12 +1638,12 @@
             <h1>Realistic AI UGC Videos That Make Products <span class="gold">Impossible to Ignore</span></h1>
             <p class="hero-subtitle">Transform your e-commerce products into engaging, scroll-stopping content for TikTok, Instagram, Facebook, and YouTube—faster, cheaper, and with zero production hassle.</p>
             <div class="hero-cta">
-                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">🚀 Get Started</button>
+                <button class="btn btn-primary" onclick="document.getElementById('footer-contact').scrollIntoView({behavior: 'smooth'})">🚀 Get Started</button>
                 <button class="btn btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">📽️ View Portfolio</button>
             </div>
         </div>
         <div class="hero-image">
-            <img src="file_00000000369c8210b0cfbfea7afa73c8.png" alt="Morakins Elijah - AI UGC Creator">
+            <img src="Morakins_brand_logo-removebg-preview.png" alt="Morakins Logo">
         </div>
     </div>
 </section>
@@ -1659,7 +1671,7 @@
         <!-- WHAT WE STAND FOR SECTION -->
         <div class="about-section">
             <div class="about-section-image">
-                <img src="Eragbe.webp" alt="What We Stand For">
+                <img src="file_00000000503081f59d23fac4bda20b78.png" alt="What We Stand For">
             </div>
             <div class="about-section-content">
                 <h3>🔥 What We Stand <span class="gold">For</span></h3>
@@ -1671,39 +1683,6 @@
                     <li><strong>Creative Freedom:</strong> Unlimited variations and testing</li>
                 </ul>
             </div>
-        </div>
-
-        <!-- OUR CLIENTS SECTION -->
-        <div class="about-section">
-            <div class="about-section-content">
-                <h3>🤝 Our <span class="gold">Clients</span></h3>
-                <p>We work with e-commerce brands across beauty, fitness, tech, beverages, skincare, and more. From startups testing new products to established brands scaling campaigns, Morakins is the trusted partner for realistic, conversion-optimized UGC videos.</p>
-                <p>Our clients trust us because we deliver:</p>
-                <ul class="about-values">
-                    <li><strong>13+</strong> Portfolio Videos Created</li>
-                    <li><strong>80%</strong> Faster Than Traditional UGC</li>
-                    <li><strong>5x</strong> More Cost-Effective Solutions</li>
-                </ul>
-            </div>
-            <div class="about-section-image">
-                <img src="file_00000000503081f59d23fac4bda20b78.png" alt="Our Clients">
-            </div>
-        </div>
-    </div>
-
-    <!-- ANIMATED STATS -->
-    <div class="about-stats">
-        <div class="stat">
-            <div class="stat-number" data-target="13">0</div>
-            <div class="stat-label">Portfolio Videos Created</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number" data-target="80">0</div>
-            <div class="stat-label">% Faster Than Traditional UGC</div>
-        </div>
-        <div class="stat">
-            <div class="stat-number" data-target="5">0</div>
-            <div class="stat-label">x More Cost-Effective</div>
         </div>
     </div>
 </section>
@@ -2300,45 +2279,8 @@
     </div>
 </section>
 
-<!-- CONTACT SECTION -->
-<section class="contact" id="contact">
-    <div class="contact-content">
-        <h2>Ready to Transform Your Product Videos? 🚀</h2>
-        <p>Stop settling for slow, expensive, inconsistent UGC. Get realistic, conversion-optimized videos in days—not weeks.</p>
-        
-        <div class="contact-buttons">
-            <button class="btn btn-secondary" onclick="window.location.href='mailto:Morakinstechsolutions@gmail.com'">📧 Get a Free Quote</button>
-            <button class="btn btn-primary" onclick="window.open('https://wa.me/2349135578049', '_blank')">💬 Chat with Us</button>
-        </div>
-
-        <div class="contact-info">
-            <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">Get in Touch</h3>
-            
-            <div class="contact-method">
-                📧 Email: <a href="mailto:Morakinstechsolutions@gmail.com">Morakinstechsolutions@gmail.com</a>
-            </div>
-            
-            <div class="contact-method">
-                📞 Phone: <a href="tel:09135578049">+234 913 557 8049</a> (WhatsApp Business)
-            </div>
-            
-            <div class="contact-method">
-                📞 Hotline: <a href="tel:09027036061">+234 902 703 6061</a>
-            </div>
-
-            <div class="contact-method" style="margin-top: 1.5rem;">
-                💼 LinkedIn: <a href="https://www.linkedin.com/in/morakins-elijah-78a88740a" target="_blank">Morakins Elijah</a>
-            </div>
-
-            <div class="contact-method">
-                📱 Instagram: <a href="https://www.instagram.com/abheymiracle/" target="_blank">@abheymiracle</a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- FOOTER -->
-<footer>
+<footer id="footer-contact">
     <div class="footer-content">
         <!-- Footer Grid Container -->
         <div class="footer-grid">
@@ -2450,12 +2392,18 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Column 5: Ready to Transform CTA -->
+            <div class="footer-column" style="background: linear-gradient(135deg, var(--secondary-blue) 0%, #2a5c8f 100%); color: var(--white); border-radius: 12px; padding: 2rem; text-align: center;">
+                <h3 style="color: var(--primary-gold); margin-bottom: 1rem;">🚀 Ready to Transform Your Product Videos?</h3>
+                <p style="color: var(--white); font-size: 0.95rem; margin-bottom: 1.5rem;">Stop settling for slow, expensive, inconsistent UGC. Get realistic, conversion-optimized videos in days—not weeks.</p>
+                <button class="btn btn-primary" onclick="window.open('https://wa.me/2349135578049', '_blank')" style="width: 100%; font-weight: 700;">💬 Chat with Us Now</button>
+            </div>
         </div>
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>&copy; 2024 Morakins Tech Solutions. All rights reserved. AI-Powered UGC Videos That Convert.</p>
-            <p style="font-size: 0.9rem; opacity: 0.85;">Crafted in Nigeria 🇳🇬 | Realistic AI UGC Videos That Make Products Impossible to Ignore</p>
         </div>
     </div>
 </footer>
