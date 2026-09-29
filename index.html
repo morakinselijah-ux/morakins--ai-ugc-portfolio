@@ -502,6 +502,35 @@
             .about-stats {
                 grid-template-columns: 1fr;
             }
+
+            /* Hero Tablet Fix */
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-content {
+                padding: 20px 0;
+            }
+
+            .hero-image {
+                position: relative;
+                width: 100%;
+                height: 250px;
+                right: auto;
+                top: auto;
+                background: none;
+                overflow: visible;
+            }
+
+            .hero-image img {
+                max-width: 200px;
+                height: auto;
+            }
         }
 
             .about-content h2 {
@@ -1532,16 +1561,67 @@
 
         @media (max-width: 768px) {
             .hero {
-                min-height: auto;
+                min-height: 600px;
                 padding: 40px 20px;
+                position: relative;
             }
 
-            .hero h1 {
+            .hero::before {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 20px;
+                min-height: auto;
+                height: auto;
+            }
+
+            .hero-content {
+                padding: 0;
+                max-width: 100%;
+                order: 1;
+                z-index: 10;
+            }
+
+            .hero-content h1 {
                 font-size: 1.8rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 0.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-cta .btn {
+                font-size: 0.9rem;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .hero-image {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                order: 2;
+                right: auto;
+                top: auto;
+                background: none;
             }
 
             .hero-image img {
-                max-width: 300px;
+                max-width: 250px;
+                height: auto;
+                object-fit: contain;
+                margin: 0 auto;
             }
 
             .nav-links {
