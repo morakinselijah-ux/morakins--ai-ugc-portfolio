@@ -1,0 +1,21 @@
+MORAKINS FIVEM HUB - UPLOAD PACK
+
+Unzip this pack first, then work from the unzipped folders.
+
+STEP 1  Open STEP-1-upload-these-9-files. Select the 9 files inside and drag them
+        into GitHub (Add file > Upload files). Commit changes.
+
+STEP 2  Open STEP-2-drag-the-assets-folder. Drag the folder named "assets" itself
+        (do not open it) into GitHub. Wait for it to finish (95 files). Commit changes.
+
+STEP 3  Open STEP-3-drag-the-assets-folder. Drag the folder named "assets" itself
+        (do not open it) into GitHub. Wait for it to finish (91 files). Commit changes.
+
+THEN    Settings > Pages > Deploy from a branch > main > / (root) > Save.
+        After 2 minutes open:
+          https://morakinselijah-ux.github.io/Morakins-fiveM-hub/check.html
+        Green = all good. Yellow = fine, the site repairs it. Red = files missing.
+
+Rules:
+  - Always drag the FOLDER called "assets", never the files inside it.
+  - Loose images already in your repo can stay. The site finds them.

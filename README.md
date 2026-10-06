@@ -1,98 +1,33 @@
-# Morakins AI UGC Portfolio
+# Morakins FiveM Hub
 
-🚀 **AI-Powered User-Generated Content Video Creation for E-Commerce Brands**
+Portfolio website for Morakins FiveM Hub. Plain HTML, CSS and JavaScript. No build step.
 
-Welcome to the Morakins Tech Solutions portfolio website. We create realistic, conversion-optimized UGC videos that make products impossible to ignore.
+Live site: https://morakinselijah-ux.github.io/Morakins-fiveM-hub/
 
-## 🎯 About Morakins
+## Pages
+Home, Portfolio, and one page per category: Vehicles, Liveries, Chains, Peds, Clothing, Weapons, Props, Maps, Logos & intros and MLOs (empty until MLO images are added). Plus About and Contact.
 
-Morakins Tech Solutions specializes in AI-powered UGC (User-Generated Content) video creation. Founded by **Morakins Elijah**, we're revolutionizing how e-commerce brands create authentic, engaging product content.
+## Structure
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Page shell (pages are routed by `#/vehicles`, `#/chains`, ...) |
+| `config.js` | Brand, logo, Discord invite, contact email, form endpoint, categories |
+| `data.js` | All portfolio projects and chain images |
+| `services.js` | Services (Server Optimization & Fixes, LSPDR FiveM PD), buyer reviews, generic illustrations |
+| `app.js` | Routing, filters, modals, video player, assistant, form |
+| `styles.css` | Styling |
+| `check.html` | Open /check.html on the live site to test that all images are uploaded |
+| `assets/logo` | Morakins logo |
+| `assets/img/<category>` | Optimized images, one folder per category |
+| `assets/video` | Compressed MP4 videos |
 
-### What We Do
-- 🎬 **Realistic AI UGC Videos** - Content that feels like real creators made it
-- ⚡ **Fast Production** - Videos in days, not weeks
-- 💰 **Cost-Effective** - No filming logistics, crews, or expensive equipment
-- 🎯 **Conversion-Focused** - Every video built to engage and sell
-- 🔄 **Multiple Creative Angles** - Unlimited testing and variations
+## Add a project
+1. Put a `.webp` image in `assets/img/<category>/`.
+2. Add an entry to `PORTFOLIO` in `data.js` (copy an existing one). Set `category` to one of: Vehicles, Liveries, Chains, Peds, Clothing, Weapons, Props, Maps, Logos, MLOs.
+3. Commit and push. The site updates in about a minute.
 
-## 📹 Services
+## Add a buyer review
+Open `services.js` and add a REAL review to the `REVIEWS` list, for example `{ name: "Buyer name", rating: 5, text: "What they said.", service: "Vehicles" }`. Reviews appear on the Home and Reviews pages. Never add invented reviews.
 
-### UGC Video Types
-- **Product Demonstrations** - Real, hands-on product showcases
-- **Creator Testimonials** - Authentic creator stories and reviews
-- **Lifestyle Integration** - Products in daily routines and moments
-- **Before & After** - Visual transformations and results
-- **Unboxing & Reveal** - Genuine excitement and discovery
-- **Problem to Solution** - Addressing customer pain points
-- **Entertainment First** - Scroll-stopping hooks with product reveals
-- **And More!** - 15+ creative content types available
-
-## 🎨 Portfolio
-
-Check out our portfolio of 10+ UGC videos showcasing:
-- Beauty & Cosmetics
-- Fitness & Supplements
-- Skincare & Wellness
-- Beverages & Food
-- Tech Products
-- And more!
-
-## 📊 Why Choose Morakins?
-
-| Feature | Morakins | Traditional UGC |
-|---------|----------|-----------------|
-| **Speed** | Days | Weeks |
-| **Cost** | $$ | $$$$ |
-| **Quality** | Premium | Variable |
-| **Variations** | Unlimited | Limited |
-| **Authenticity** | Realistic | Often staged |
-
-## 🚀 How It Works
-
-### Our 4-Step Process
-
-1. **DISCOVER** - Understanding your product, audience, and goals
-2. **STRATEGY** - Creating multiple creative concepts and scripts
-3. **BUILD** - Producing realistic, AI-powered UGC videos
-4. **LAUNCH** - Final editing and platform optimization
-
-## 📞 Contact & Connect
-
-- **Email:** Morakinstechsolutions@gmail.com
-- **WhatsApp:** +234 913 557 8049
-- **Phone:** +234 902 703 6061
-- **LinkedIn:** [Morakins Elijah](https://www.linkedin.com/in/morakins-elijah-78a88740a)
-- **Instagram:** [@abheymiracle](https://www.instagram.com/abheymiracle/)
-
-## 💼 Ready to Transform Your Product Videos?
-
-Let's work together to create UGC content that converts.
-
-📧 **Email us** for a custom quote
-💬 **WhatsApp** for quick inquiries
-🤝 **Schedule a call** to discuss your project
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-## 🎉 Testimonials
-
-> "Morakins delivered 5 stunning UGC videos in one week. The quality is incredible—they look like real creator content." 
-> — **Amara Jackson, Glow Cosmetics**
-
-> "We tried traditional UGC creators and paid 10x more for half the results. Morakins offers realistic product demos that actually convert."
-> — **Marcus Chen, FitFuel Nutrition**
-
-> "The turnaround time is insane. I needed videos for a product launch and Morakins delivered in 4 days."
-> — **Sarah Rodriguez, LuxeBeauty Store**
-
----
-
-**© 2024 Morakins Tech Solutions. All rights reserved.**
-
-*Crafted in Nigeria 🇳🇬 | AI-Powered UGC Videos That Convert*
+## Content notes
+Ownership of the supplied portfolio material is not verified. Some previews show other creators' names. See the Source field on each project.
