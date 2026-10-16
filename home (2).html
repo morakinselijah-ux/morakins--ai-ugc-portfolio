@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morakins Tech Solutions | UGC Strategy and AI Video Creative for Ecommerce Brands</title>
+<meta name="description" content="UGC strategy, scripts and AI-assisted product videos for ecommerce brands. Customer-focused concepts, hooks and creative testing plans.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14182B;--blue:#1E3A5F;--gold:#D4A855;--ink:#1A1D2E;--mute:#5A6072;--bg:#F3F5F9;--line:#DDE2EC;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:400 17px/1.6 'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.12;letter-spacing:-.01em}
+a{color:inherit}img,video{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:12px}
+.lead{color:var(--mute);max-width:62ch;margin-bottom:36px}
+.dark{background:var(--navy);color:#EDEFF6}.dark .lead{color:#AEB5CC}
+header{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:3px solid var(--gold)}
+.nav{display:flex;align-items:center;gap:18px;height:68px}
+.nav img{height:44px;width:auto}
+.nav ul{display:flex;gap:18px;list-style:none;margin-left:auto}
+.nav a{text-decoration:none;color:#DCE0EE;font-size:.95rem}.nav a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:13px 24px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--gold);cursor:pointer;font:600 1rem 'Public Sans',sans-serif}
+.btn.p{background:var(--gold);color:var(--navy)}.btn.p:hover{background:#e3bb6c}
+.btn.s{background:transparent;color:#fff}.btn.s:hover{background:rgba(212,168,85,.15)}
+.btn.o{border-color:var(--blue);color:var(--blue);background:transparent}
+.menu{display:none;margin-left:auto;background:none;border:2px solid var(--gold);color:#fff;border-radius:6px;padding:6px 12px;font-size:1rem}
+.hero{padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.8rem);font-weight:800;margin-bottom:18px}
+.hero p{color:#BFC6DC;font-size:1.1rem;max-width:52ch;margin-bottom:28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.chain{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px;font-size:.92rem;color:#AEB5CC}
+.chain span{border:1px solid #3A4262;border-radius:99px;padding:4px 14px}
+.phone{position:relative;justify-self:center;width:min(280px,70vw)}
+.phone video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:26px;border:6px solid #2A3150;background:#000}
+.brief{position:absolute;left:-60px;bottom:28px;width:230px;background:var(--white);color:var(--ink);border-radius:10px;padding:14px;font-size:.82rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.brief b{display:block;color:var(--blue)}.brief small{color:var(--mute)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px}
+.panel h3{font-size:1.25rem;margin-bottom:8px}
+.panel ul{padding-left:18px;color:var(--mute);margin:10px 0}
+.panel li{margin:4px 0}
+.panel .need{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:.92rem}
+.panel.hl{border:2px solid var(--gold)}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px;max-width:900px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:14px 0;border-top:1px solid #333B5C}
+.steps li::before{content:counter(s);font:800 1.5rem 'Bricolage Grotesque',sans-serif;color:var(--gold)}
+.steps b{display:block;color:#fff}.steps span{color:#AEB5CC;font-size:.94rem}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.filters button{border:1.5px solid var(--blue);background:transparent;color:var(--blue);padding:7px 16px;border-radius:99px;font:600 .92rem 'Public Sans',sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--blue);color:#fff}
+.works{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.note{background:#FFF7E0;border-left:4px solid var(--gold);padding:12px 16px;border-radius:6px;font-size:.93rem;margin-bottom:22px}
+dialog{border:0;border-radius:14px;max-width:880px;width:94vw;padding:0;background:var(--white)}
+dialog::backdrop{background:rgba(10,12,24,.8)}
+.m{display:grid;grid-template-columns:minmax(0,.8fr) 1fr}
+.m video{width:100%;max-height:82vh;background:#000}
+.m .t{padding:22px;overflow:auto;max-height:82vh}.m dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.93rem;margin:12px 0}
+.m dt{font-weight:600;color:var(--blue)}.x{position:absolute;right:10px;top:10px;background:var(--navy);color:#fff;border:0;border-radius:50%;width:36px;height:36px;font-size:1.1rem;cursor:pointer;z-index:2}
+details{background:var(--white);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:14px 18px}
+summary{font-weight:600;cursor:pointer}details p,details ul{margin-top:10px;color:var(--mute)}details ul{padding-left:20px}
+.about{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--white);color:var(--ink);padding:26px;border-radius:12px}
+label{font-weight:600;font-size:.9rem;display:grid;gap:5px}.full{grid-column:1/-1}
+input,select,textarea{font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:7px;width:100%;background:#fff}
+textarea{min-height:90px}
+#out{grid-column:1/-1;display:none;background:#EEF3FB;border-radius:8px;padding:16px}
+#out .cta{margin-top:10px}#st{font-weight:600;margin-bottom:6px}
+.contactgrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:36px}
+.contactgrid a{color:var(--gold)}
+footer{background:#0D101E;color:#9AA2BB;padding:28px 0;font-size:.9rem}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:900px){.hero .wrap,.contactgrid,.about,.m{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.works{grid-template-columns:repeat(2,1fr)}.steps,form{grid-template-columns:1fr}.brief{left:auto;right:-8px;width:200px}.menu{display:block}.nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--navy);padding:16px 20px;gap:12px}.nav ul.open{display:flex}.nav .btn{display:none}section{padding:52px 0}.about img{width:120px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.hero{position:relative;overflow:hidden}.hero .wrap{position:relative;z-index:2}
+.orbs{position:absolute;inset:0;pointer-events:none}.orbs i{position:absolute;border-radius:50%;filter:blur(80px);opacity:.3;mix-blend-mode:screen;animation:drift 16s ease-in-out infinite alternate}
+.orbs i:nth-child(1){width:380px;height:380px;background:#D4A855;left:-110px;top:10%}.orbs i:nth-child(2){width:320px;height:320px;background:#3B82F6;right:4%;top:6%;animation-delay:-5s}.orbs i:nth-child(3){width:260px;height:260px;background:#F472B6;right:28%;bottom:-70px;animation-delay:-9s}
+@keyframes drift{to{transform:translate(70px,-50px) scale(1.2)}}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(.5em);animation:wup .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*.1s + .1s)}
+@keyframes wup{to{opacity:1;transform:none}}
+.btn.p{position:relative;overflow:hidden}.btn.p::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-130%);transition:transform .7s}.btn.p:hover::after{transform:translateX(130%)}
+.marq{background:#0D101E;border-block:1px solid #2A3150;overflow:hidden;padding:16px 0}
+.marq .track{display:flex;width:max-content;animation:mq 45s linear infinite}.marq:hover .track{animation-play-state:paused}
+.marq span{font:800 1.4rem 'Bricolage Grotesque',sans-serif;color:var(--ac);white-space:nowrap;padding-right:44px}.marq span::after{content:"\2726";margin-left:44px;color:#5A6385}
+@keyframes mq{to{transform:translateX(-50%)}}
+.stats{background:linear-gradient(135deg,#1E3A5F,#14182B);color:#fff;padding:56px 0}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{text-align:center;padding:26px 12px;border:1px solid #3A4A70;border-radius:14px;background:rgba(255,255,255,.04)}
+.stat b{display:block;font:800 clamp(2.2rem,5vw,3.4rem)/1 'Bricolage Grotesque',sans-serif;color:var(--gold)}.stat span{color:#C3CADF;font-size:.95rem}
+.rv{opacity:0}.rv.in{animation:rise .65s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1}}
+.card{position:relative;aspect-ratio:9/14;border:0;border-radius:16px;overflow:hidden;cursor:pointer;padding:0;text-align:left;font:inherit;color:#fff;background:#111;box-shadow:0 0 0 1.5px color-mix(in srgb,var(--ac) 55%,transparent),0 10px 24px rgba(20,24,43,.18);transition:transform .25s,box-shadow .25s;animation:pop .5s both;animation-delay:calc(var(--i,0)*.05s)}
+.card img,.card .pv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}.card .pv{z-index:1}
+.card:hover{transform:translateY(-6px);box-shadow:0 0 0 2px var(--ac),0 0 26px color-mix(in srgb,var(--ac) 60%,transparent),0 16px 30px rgba(20,24,43,.3)}.card:hover img{transform:scale(1.07)}
+.card::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(10,12,24,.92) 0%,rgba(10,12,24,.35) 42%,transparent 65%)}
+.card .bd{position:absolute;z-index:3;top:10px;left:10px;background:var(--ac);color:#14182B;font:600 .74rem 'Public Sans',sans-serif;padding:4px 10px;border-radius:99px}
+.card .pl{position:absolute;z-index:3;top:50%;left:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);border:2px solid #fff;transition:transform .25s,background .25s}
+.card .pl::before{content:"";position:absolute;left:21px;top:15px;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #fff}.card:hover .pl{transform:scale(1.15);background:var(--ac)}
+.card div{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:14px}.card b{display:block;font:800 1.02rem/1.2 'Bricolage Grotesque',sans-serif}.card small{color:#D5DAEA}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.96)}}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.marq span{font-size:1.1rem}}
+@media(prefers-reduced-motion:reduce){.orbs i,.marq .track,.card{animation:none}.hero h1 .w{opacity:1;transform:none;animation:none}.rv{opacity:1}.marq{overflow-x:auto}}
+.rvs{position:relative;overflow:hidden;background:#0B0E1C;color:#fff}
+.rvs::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);animation:gm 20s linear infinite}
+@keyframes gm{to{background-position:48px 48px}}
+.aur{position:absolute;inset:0;pointer-events:none}.aur i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.28;animation:drift 18s ease-in-out infinite alternate}
+.aur i:nth-child(1){width:420px;height:420px;background:#D4A855;left:-120px;top:-60px}.aur i:nth-child(2){width:360px;height:360px;background:#F472B6;right:-80px;top:30%;animation-delay:-6s}.aur i:nth-child(3){width:340px;height:340px;background:#3B82F6;left:35%;bottom:-140px;animation-delay:-11s}
+.rvs .wrap{position:relative;z-index:2}.rvs .lead{color:#AEB5CC}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;perspective:1000px}
+.rw{animation:fl 6s ease-in-out infinite;animation-delay:calc(var(--i)*-1.4s)}@keyframes fl{50%{transform:translateY(-9px)}}
+.rc{position:relative;height:100%;min-height:270px;display:flex;flex-direction:column;padding:24px 20px;border-radius:18px;background:rgba(255,255,255,.07);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);transition:transform .2s ease,border-color .3s,box-shadow .3s}
+.rc::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(212,168,85,.3),transparent 60%);opacity:0;transition:opacity .3s}
+.rc:hover{border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.5)}.rc:hover::before{opacity:1}
+.rc .q{font:800 4rem/.7 'Bricolage Grotesque',serif;color:var(--gold);opacity:.7;height:30px}
+.rc .st{margin-top:8px}.rc .st span{display:inline-block;color:var(--gold);animation:tw 2.4s ease-in-out infinite;animation-delay:calc(var(--k)*.2s)}
+.rc .st .off{color:rgba(255,255,255,.25);animation:none}@keyframes tw{50%{transform:scale(1.28);filter:drop-shadow(0 0 6px #D4A855)}}
+.rc p{flex:1;margin:12px 0 18px;color:#DDE1F0;font-size:.97rem}
+.rc .who{display:flex;gap:10px;align-items:center}.rc .who small{display:block;color:#9AA2BB}
+.rc .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#D4A855,#F472B6);color:#14182B;font:800 1.1rem 'Bricolage Grotesque',sans-serif}
+.rc .bdg{position:absolute;top:12px;right:12px;font-size:.7rem;border:1px solid #5A6385;color:#AEB5CC;border-radius:99px;padding:2px 9px}
+@media(max-width:900px){.rgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.rgrid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.rvs::before,.aur i,.rw,.rc .st span{animation:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="#top" aria-label="Morakins Tech Solutions home"><img src="Morakins_brand_logo-removebg-preview.png" alt="Morakins Tech Solutions logo"></a>
+<button class="menu" aria-expanded="false" aria-controls="nl">Menu</button>
+<ul id="nl"><li><a href="#strategy">Strategy</a></li><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#casestudy">Case study</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="btn p" href="#contact">Discuss Your Project</a>
+</div></header>
+
+<main id="top">
+<section class="hero dark"><div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div><div class="wrap">
+<div>
+<h1>Turn Customer Insights Into Better Product Video Ideas</h1>
+<p>I help ecommerce brands develop customer-focused UGC concepts, compelling hooks, clear scripts, and AI-assisted product videos designed for social content and creative testing.</p>
+<div class="cta"><a class="btn p" href="#contact">Discuss Your Project</a><a class="btn s" href="#work">Explore My Work</a></div>
+<div class="chain" aria-label="My process in short"><span>Research</span><span>Insight</span><span>Hook and script</span><span>Video</span><span>Test and learn</span></div>
+</div>
+<div class="phone">
+<video id="heroV" muted loop playsinline autoplay preload="metadata" poster="Skincare%20GlowDrop%20Serum_thumb.jpg" aria-label="Sample UGC video: skincare serum ritual"><source src="Skincare%20GlowDrop%20Serum.mp4" type="video/mp4"></video>
+<div class="brief"><b>Concept brief</b>Insight (hypothesis): people trust a routine they can picture themselves doing.<br><small>Hook: "This takes me 30 seconds."</small></div>
+</div>
+</div></section>
+
+<div class="marq" aria-label="Topics I work on"><div class="track" id="mq"></div></div>
+<section class="stats" aria-label="Portfolio at a glance"><div class="wrap"><div class="g4" id="stats"></div></div></section>
+<section id="problems"><div class="wrap">
+<h2>Great video starts before the camera</h2>
+<p class="lead">Many brands post product videos that look fine but say the wrong thing to the wrong person. My work fixes the thinking first, then the video.</p>
+<div class="grid3">
+<div class="panel"><h3>Who I help</h3><p>Skincare and beauty, fashion and jewelry, pet products and other ecommerce brands, plus agencies that need research, scripts or production support.</p></div>
+<div class="panel"><h3>Problems I address</h3><ul><li>Videos with no clear customer or message</li><li>Weak opening hooks</li><li>Not enough variety to test</li><li>No time or budget for creators</li></ul></div>
+<div class="panel"><h3>What you receive</h3><ul><li>Customer-focused concepts</li><li>Hooks and scripts</li><li>AI-assisted product videos</li><li>A simple plan for testing them</li></ul></div>
+</div></div></section>
+
+<section id="strategy" class="dark"><div class="wrap">
+<h2>How a project moves from idea to finished video</h2>
+<p class="lead">Each step has a job. Skipping one is how brands end up with videos that look good and sell nothing.</p>
+<ol class="steps">
+<li><div><b>Product and brand research</b><span>Learn what is sold, to whom, and what the brand already says.</span></div></li>
+<li><div><b>Customer insight development</b><span>Find what customers want, fear and doubt. Mark each point as fact or hypothesis.</span></div></li>
+<li><div><b>Competitor and market research</b><span>See what others show and say, and where the gap is.</span></div></li>
+<li><div><b>Creative angle selection</b><span>Pick a few different angles, not one idea reworded.</span></div></li>
+<li><div><b>Hook and script development</b><span>Write the opening seconds and the full script around one clear message.</span></div></li>
+<li><div><b>Video production planning</b><span>Plan scenes, presenter, voiceover, captions and format.</span></div></li>
+<li><div><b>Content production</b><span>Create the AI-assisted videos from the approved plan.</span></div></li>
+<li><div><b>Review and revisions</b><span>You give feedback, I fix errors and refine. Facts get checked.</span></div></li>
+<li><div><b>Final delivery</b><span>Organised files, scripts, captions and a clear handover.</span></div></li>
+<li><div><b>Evaluation and closure</b><span>If you share results, we review them honestly and plan the next test.</span></div></li>
+</ol></div></section>
+
+<section id="services"><div class="wrap">
+<h2>Three ways to work together</h2>
+<p class="lead">Start with strategy, start with video, or combine both. No service promises sales, viral reach or a set advertising result.</p>
+<div class="grid3">
+<div class="panel"><h3>UGC Strategy</h3><p>The thinking and the plan.</p><ul><li>Product and brand research</li><li>Customer insight hypotheses</li><li>Creative angles and hooks</li><li>UGC scripts</li><li>Video briefs and storyboards</li><li>Content plan</li><li>Creative testing recommendations</li></ul><p class="need"><b>I need from you:</b> product details, target customer, brand rules, any past results you can share.</p></div>
+<div class="panel"><h3>AI UGC Video Creation</h3><p>Finished videos from a script or brief.</p><ul><li>AI-assisted product videos</li><li>Product demonstrations</li><li>Short-form video concepts</li><li>Scene planning and visual direction</li><li>Voiceover and captions</li><li>Editing and final delivery</li></ul><p class="need"><b>I need from you:</b> product photos or references, your script or brief, preferred platform and format.</p></div>
+<div class="panel hl"><h3>Strategy and Video Together</h3><p>One project from research to delivery.</p><ul><li>Everything in the first two services</li><li>One approved plan guiding every video</li><li>Scripts and videos that match</li><li>Review rounds and handover</li></ul><p class="need"><b>Boundaries:</b> the number of videos, concepts and revision rounds is agreed in writing before work starts. Extra work is quoted separately.</p></div>
+</div></div></section>
+
+<section id="work" style="background:#fff"><div class="wrap">
+<h2>My work, with the thinking behind it</h2>
+<p class="lead">Select a video to see its concept: audience, angle and the customer insight it is based on.</p>
+<p class="note"><b>Please note:</b> these are my own sample and concept videos. Brand names shown are sample brands, and the insights are hypotheses to test. They are not client campaigns and no sales results are claimed.</p>
+<div class="filters" role="group" aria-label="Filter work"></div>
+<div class="works" id="works"></div>
+</div></section>
+
+<section id="casestudy"><div class="wrap">
+<h2>How I document a project</h2>
+<p class="lead">Every project gets the same structure. This example is a concept project, not a real campaign.</p>
+<details open><summary>Concept case study: skincare serum ritual (sample brand)</summary>
+<ul><li><b>Context:</b> a sample serum brand selling online to adults with a simple routine.</li><li><b>Objective:</b> make a short video that shows how easy the product is to use.</li><li><b>Insight (hypothesis):</b> people may trust a routine more when they can picture doing it every day.</li></ul></details>
+<details><summary>Angles, hooks and script</summary>
+<ul><li><b>Angle A, the 30-second routine:</b> hook "My whole routine takes 30 seconds."</li><li><b>Angle B, the doubt:</b> hook "I thought serums were a waste of money."</li><li><b>Angle C, the shelf check:</b> hook "Three things I look for in a serum."</li></ul>
+<p>Script outline: hook (0-3s), the problem, product shown in use, [benefit verified with the client], simple call to action. Product claims are only added after the client confirms them.</p></details>
+<details><summary>Testing recommendations</summary>
+<ul><li>Compare the three hooks with the same video body, one change at a time.</li><li>Run each long enough to judge on thumb-stop rate and watch time, not on a single day.</li></ul></details>
+<details><summary>Results and lessons</summary><p>No results to report. This is a concept project and no campaign was run. For real client work this section holds verified numbers from the client, with limits stated, plus lessons and next steps.</p></details>
+</div></section>
+
+<section id="reviews" class="rvs"><div class="aur" aria-hidden="true"><i></i><i></i><i></i></div><div class="wrap">
+<h2>What clients say</h2>
+<p class="lead">Words from brands I have worked with, shown with their permission.</p>
+<div class="rgrid" id="revlist"></div>
+</div></section>
+
+<section id="about" class="dark"><div class="wrap about">
+<img src="Morakins_brand_logo-removebg-preview.png" alt="Morakins Tech Solutions logo" loading="lazy">
+<div><h2>About Morakins Tech Solutions</h2>
+<p class="lead" style="margin-bottom:12px">Morakins Tech Solutions offers UGC strategy and AI video creation for ecommerce brands. I start with the customer, build a clear message, write the script, then make the video. I am growing this service project by project, and I will always tell you what is concept, what is verified and what is still to be tested.</p>
+<p style="color:#AEB5CC">Based in Nigeria, working with brands online.</p></div>
+</div></section>
+
+<section id="contact" class="dark" style="padding-top:0"><div class="wrap contactgrid">
+<div><h2>Discuss your project</h2><p class="lead">Fill in what you know. Unsure about something? Leave it blank. I reply by email or WhatsApp.</p>
+<p><a href="mailto:Morakinstechsolutions@gmail.com">Morakinstechsolutions@gmail.com</a></p>
+<p><a href="https://wa.me/2349135578049" target="_blank" rel="noopener">WhatsApp +234 913 557 8049</a></p>
+<p><a href="https://www.linkedin.com/in/morakins-elijah-78a88740a" target="_blank" rel="noopener">LinkedIn</a> &nbsp; <a href="https://www.instagram.com/abheymiracle/" target="_blank" rel="noopener">Instagram</a></p></div>
+<form id="f" novalidate>
+<label>Name *<input name="Name" required autocomplete="name"></label>
+<label>Business email *<input name="Email" type="email" required autocomplete="email"></label>
+<label>Brand or website<input name="Website" placeholder="https://"></label>
+<label>Product category<select name="Category"><option>Skincare / beauty</option><option>Fashion / jewelry</option><option>Pet products</option><option>Other ecommerce</option><option>Agency</option></select></label>
+<label class="full">Project objective *<textarea name="Objective" required></textarea></label>
+<label>Service needed<select name="Service"><option>UGC Strategy</option><option>AI UGC Video Creation</option><option>Strategy and Video Together</option><option>Not sure yet</option></select></label>
+<label>Preferred platform<select name="Platform"><option>TikTok</option><option>Instagram Reels</option><option>Facebook</option><option>YouTube Shorts</option><option>Not sure</option></select></label>
+<label>Target audience<input name="Audience"></label>
+<label>Desired deliverables<input name="Deliverables" placeholder="e.g. 3 scripts, 2 videos"></label>
+<label>Budget range<select name="Budget"><option>Not sure yet</option><option>Under $200</option><option>$200 to $500</option><option>$500 to $1,000</option><option>Over $1,000</option></select></label>
+<label>Timeline<select name="Timeline"><option>Flexible</option><option>Within 1 week</option><option>1 to 2 weeks</option><option>2 to 4 weeks</option></select></label>
+<label class="full">Anything else?<textarea name="Notes"></textarea></label>
+<button class="btn p full" type="submit">Prepare my inquiry</button>
+<div id="out" role="status" aria-live="polite"><p id="st"></p><div class="cta"><a class="btn o" id="em" href="#">Send by email</a><a class="btn o" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a><button class="btn o" type="button" id="cp">Copy message</button></div></div>
+</form>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Morakins Tech Solutions</span><span>UGC strategy and AI video creative</span></div></footer>
+
+<dialog id="dlg" aria-label="Video details"><button class="x" aria-label="Close" id="dx">×</button><div class="m"><video id="mv" controls playsinline preload="none"></video><div class="t" id="mt"></div></div></dialog>
+
+<script>
+var FORM_ENDPOINT="";// Optional: paste a Formspree URL here to enable direct sending.
+var V=[
+["Skincare GlowDrop Serum.mp4","Skincare Serum Ritual","Skincare and beauty","Product demo","TikTok, Reels","Adults building a simple routine","The easy daily ritual","People may trust a serum more when they see how little effort it takes each day."],
+["BeautyCosmetics Velora Satin Glow Lipstick.mp4","Luxury Lipstick Application","Skincare and beauty","Before and after","Instagram Reels","Shoppers who want a polished everyday look","Finish up close","Shoppers want to see the finish on skin before they buy."],
+["Skincare GlowDrop Serum.mp4",0],
+["Creator_applying_Vitamin_C_serum_20260920115004.mp4","Vitamin C Serum Transformation","Skincare and beauty","Creator-style first-person use","TikTok","Skincare shoppers who want proof of use","First-person routine","First-person use may feel more credible than a plain product shot."],
+["Creator_Facial_Routine.mp4","Complete Facial Care Routine","Skincare and beauty","Step-by-step routine","TikTok, Reels","Beginners who feel lost in skincare","Routine walkthrough","Beginners may buy when the steps look easy to copy."],
+["PureGlow_Body_Wash.mp4","Daily Body Care Ritual","Skincare and beauty","Lifestyle","Reels","People who treat the shower as self-care","Self-care moment","A daily product sells better when tied to a feeling, not only a function."],
+["Creator_Product_Benefits.mp4","Product Benefits Showcase","Skincare and beauty","Creator-style benefits talk","TikTok","Shoppers comparing similar products","Benefits in plain words","Shoppers may prefer benefits explained simply by a person over a feature list."],
+["Beverage Brewline Cold Brew.mp4","Morning Cold Brew Ritual","Beverage","Lifestyle","TikTok, Reels","Busy morning drinkers","Ritual over caffeine","A drink may feel worth buying when tied to a calm morning moment."],
+["Woman_drinking_cold_brew_coffee.mp4","Premium Coffee Experience","Beverage","Lifestyle","Reels","Coffee lovers who like a treat","The premium moment","Sensory close-ups may make a drink feel more premium."],
+["From Main Klickpin CF- Soda Can 3d Product Animation - 2KhLKQjL1.mp4","3D Product Animation","Beverage","3D product visual","Paid social","Brands needing a hero visual","Product as the hero","A clean 3D visual can stop the scroll where real footage is not available."],
+["Fitness Supplement  PureFuel Protein Shaker.mp4","Post-Workout Protein Shake","Fitness and tech","Product demo","Reels, Shorts","Gym-goers who want simple routines","Convenience after training","Buyers may care more about easy mixing than ingredient lists."],
+["AI Products Video.mp4","Tech Product Feature Showcase","Fitness and tech","Feature showcase","Shorts, Reels","Online shoppers asking what it does","One feature, shown fast","Showing one clear feature quickly answers the first question buyers have."],
+["video_4669d95b-00c9-43b2-9f20-91c151f9d3ba.mp4","Transformation Results","Other","Before and after concept","TikTok, Reels","To be confirmed","Transformation","To be confirmed."]
+].filter(function(x){return x[1]!==0});
+var $=function(s){return document.querySelector(s)},th=function(f){return encodeURI(f.replace(/\.mp4$/,"_thumb.jpg"))};
+var cats=["All"].concat(V.map(function(v){return v[2]}).filter(function(c,i,a){return a.indexOf(c)===i}));
+var fl=$(".filters"),wk=$("#works");
+cats.forEach(function(c,i){var b=document.createElement("button");b.textContent=c;b.setAttribute("aria-pressed",i==0);b.onclick=function(){fl.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});draw(c)};fl.appendChild(b)});
+var AC={"Skincare and beauty":"#F472B6","Beverage":"#FBBF24","Fitness and tech":"#38BDF8","Other":"#A78BFA"};
+function hv(b,f){var vd;b.addEventListener("mouseenter",function(){if(matchMedia("(hover:none)").matches||matchMedia("(prefers-reduced-motion:reduce)").matches)return;vd=document.createElement("video");vd.src=encodeURI(f);vd.muted=true;vd.loop=true;vd.playsInline=true;vd.className="pv";b.insertBefore(vd,b.firstChild);vd.play().catch(function(){})});b.addEventListener("mouseleave",function(){if(vd){vd.remove();vd=null}})}
+function draw(c){wk.innerHTML="";var n=0;V.forEach(function(v,i){if(c!=="All"&&v[2]!==c)return;var b=document.createElement("button");b.className="card";b.style.setProperty("--ac",AC[v[2]]||"#D4A855");b.style.setProperty("--i",n++);b.setAttribute("aria-label","Play "+v[1]);b.innerHTML='<img loading="lazy" alt="" src="'+th(v[0])+'"><span class="bd"></span><span class="pl"></span><div><b></b><small></small></div>';b.querySelector(".bd").textContent=v[2];b.querySelector("b").textContent=v[1];b.querySelector("small").textContent=v[3]+" (sample)";b.onclick=function(){open_(i)};hv(b,v[0]);wk.appendChild(b)})}
+draw("All");
+var d=$("#dlg"),mv=$("#mv");
+function open_(i){var v=V[i];mv.src=encodeURI(v[0]);mv.poster=th(v[0]);var t=$("#mt");t.innerHTML="<h3></h3><p class='note' style='margin:10px 0'>Concept and hypothesis. Not a client result.</p><dl></dl>";t.querySelector("h3").textContent=v[1];var L=[["Category",v[2]],["Format",v[3]],["Platform",v[4]],["Audience",v[5]],["Angle",v[6]],["Insight (hypothesis)",v[7]]];L.forEach(function(r){var a=document.createElement("dt"),b=document.createElement("dd");a.textContent=r[0];b.textContent=r[1];t.querySelector("dl").append(a,b)});d.showModal();mv.play().catch(function(){})}
+function close_(){mv.pause();d.close()}
+$("#dx").onclick=close_;d.addEventListener("close",function(){mv.pause()});d.addEventListener("click",function(e){if(e.target===d)close_()});
+var mb=$(".menu"),nl=$("#nl");mb.onclick=function(){var o=nl.classList.toggle("open");mb.setAttribute("aria-expanded",o)};nl.onclick=function(e){if(e.target.tagName=="A"){nl.classList.remove("open");mb.setAttribute("aria-expanded","false")}};
+$("#yr").textContent=new Date().getFullYear();
+var f=$("#f"),out=$("#out"),st=$("#st"),msg="";
+f.addEventListener("submit",function(e){e.preventDefault();var fd=new FormData(f),n=fd.get("Name").trim(),em=fd.get("Email").trim(),ob=fd.get("Objective").trim();
+out.style.display="block";
+if(!n||!em||!ob||!/^\S+@\S+\.\S+$/.test(em)){st.textContent="Please add your name, a valid email and your project objective.";$("#out .cta").style.display="none";return}
+$("#out .cta").style.display="flex";
+msg="New project inquiry for Morakins Tech Solutions\n\n";fd.forEach(function(v,k){if(String(v).trim())msg+=k+": "+String(v).trim()+"\n"});
+if(FORM_ENDPOINT){fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(Object.fromEntries(fd))}).then(function(r){st.textContent=r.ok?"Your inquiry was sent. I will reply by email.":"It could not be sent. Please use one of the options below.";if(r.ok)$("#out .cta").style.display="none"}).catch(function(){st.textContent="It could not be sent. Please use one of the options below."})}
+else st.textContent="Nothing has been sent yet. Choose how you want to send this message to me.";
+$("#em").href="mailto:Morakinstechsolutions@gmail.com?subject="+encodeURIComponent("Project inquiry: "+n)+"&body="+encodeURIComponent(msg);
+$("#wa").href="https://wa.me/2349135578049?text="+encodeURIComponent(msg)});
+$("#cp").onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(msg):Promise.reject()).then(function(){st.textContent="Message copied. Paste it into an email, DM or WhatsApp."}).catch(function(){st.textContent="Copy failed. Please use the email or WhatsApp button."})};
+var h1=$(".hero h1");h1.setAttribute("aria-label",h1.textContent);h1.innerHTML=h1.textContent.split(" ").map(function(w,i){return '<span class="w" style="--i:'+i+'" aria-hidden="true">'+w+'</span>'}).join(" ");
+var MQ=[["UGC Strategy","#D4A855"],["Customer Insights","#F472B6"],["Hooks and Scripts","#38BDF8"],["AI Product Videos","#4ADE80"],["Product Storytelling","#A78BFA"],["Creative Testing","#FBBF24"],["Ecommerce Research","#F472B6"],["Skincare and Beauty","#38BDF8"],["Fashion and Jewelry","#4ADE80"],["Pet Products","#A78BFA"]];
+var mh=MQ.map(function(m){return '<span style="--ac:'+m[1]+'">'+m[0]+'</span>'}).join("");$("#mq").innerHTML=mh+mh;
+$("#stats").innerHTML=[[V.length,"Sample videos"],[3,"Services"],[10,"Process steps"],[4,"Video platforms"]].map(function(x){return '<div class="stat"><b data-n="'+x[0]+'">0</b><span>'+x[1]+'</span></div>'}).join("");
+var bs=document.querySelectorAll("b[data-n]");
+if("IntersectionObserver" in window){
+var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var b=e.target,n=+b.dataset.n,t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1400);b.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)})},{threshold:.5});bs.forEach(function(b){co.observe(b)});
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");ro.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".panel,.stat,.steps li,details,.hero .phone").forEach(function(el,i){el.style.setProperty("--d",(i%6)*.07+"s");el.classList.add("rv");ro.observe(el)})
+}else bs.forEach(function(b){b.textContent=b.dataset.n});
+
+// REAL reviews only, added after the client agrees. Format: {name:"Name",place:"Town, Country",rating:5,text:"Their own words."}
+var REVIEWS=[{name:"Adam Richard",country:"United States",rating:5,tag:"UGC Strategy",place:"Focus: Content direction and brand messaging",text:"The UGC strategy gave me a clearer direction for creating content that connects with the target audience. The content ideas and messaging framework made planning campaigns much easier."},
+{name:"Perez Antonio",country:"Spain",rating:5,tag:"Content Planning",place:"Focus: Hooks, scripts, and creative ideas",text:"The strategy helped organize our content ideas into a more practical plan. Having clearer hooks, content angles, and calls to action gave us a useful starting point for our UGC campaigns."},
+{name:"Alexander Smith",country:"United Kingdom",rating:5,tag:"Brand Growth",place:"Focus: Audience targeting and consistency",text:"I appreciated the focus on understanding the audience and choosing content themes that fit the brand. The recommendations provided a more structured approach to planning consistent UGC content."},
+{name:"Ayeni Petter",country:"Nigeria",rating:5,tag:"E-commerce UGC",place:"Focus: Product storytelling and conversions",text:"The UGC strategy offered helpful ideas for presenting products in a more relatable way. The suggested content angles and calls to action can help us develop more purposeful product-focused campaigns."}];
+var rl=$("#revlist"),PH={name:"Client name",place:"Town, Country",rating:0,text:"A real client review will appear here once a client has shared it and agreed to publish it.",ph:1};
+function tilt(c){c.addEventListener("mousemove",function(e){var b=c.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top;c.style.setProperty("--mx",x+"px");c.style.setProperty("--my",y+"px");if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;c.style.transform="rotateY("+((x/b.width-.5)*14)+"deg) rotateX("+(-(y/b.height-.5)*14)+"deg)"});c.addEventListener("mouseleave",function(){c.style.transform=""})}
+(REVIEWS.length?REVIEWS:[PH,PH,PH,PH]).forEach(function(r,i){var w=document.createElement("div");w.className="rw";w.style.setProperty("--i",i);var c=document.createElement("article");c.className="rc";
+var q=document.createElement("div");q.className="q";q.textContent="\u201C";q.setAttribute("aria-hidden","true");
+var st=document.createElement("div");st.className="st";st.setAttribute("aria-label",r.ph?"No rating yet":r.rating+" out of 5 stars");for(var k=0;k<5;k++){var sp=document.createElement("span");sp.textContent="\u2605";sp.style.setProperty("--k",k);if(r.ph||k>=r.rating)sp.className="off";st.appendChild(sp)}
+var p=document.createElement("p");p.textContent=r.text;
+var f=document.createElement("div");f.className="who";var av=document.createElement("span");av.className="av";av.textContent=r.name.charAt(0);var nm=document.createElement("div");var bn=document.createElement("b");bn.textContent=r.name;var sm=document.createElement("small");sm.textContent=r.place;if(r.country){var ct=document.createElement("small");ct.textContent=r.country;ct.style.color="#D4A855";nm.append(bn,ct,sm)}else nm.append(bn,sm);f.append(av,nm);
+if(r.ph||r.tag){var bd=document.createElement("span");bd.className="bdg";bd.textContent=r.ph?"Sample layout":r.tag;c.appendChild(bd)}
+c.append(q);if(r.ph||r.rating)c.append(st);c.append(p,f);w.appendChild(c);rl.appendChild(w);tilt(c)});
+</script>
+</body>
+</html>
